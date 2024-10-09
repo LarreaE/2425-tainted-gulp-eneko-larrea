@@ -31,6 +31,7 @@ class Character {
                 this.magick += potion.value;
 
                 console.log("Joseph ha bebido el elixir deseado y es purificado, sumando el valor de la pocion a todos sus atributos");
+                showCharacterWithoutPotions(this)
                 break;
             }
             else if(potion.name === 'Failed Potion') {
@@ -102,8 +103,17 @@ class Character {
                     }
                 }
             }
+            showCharacterWithoutPotions(this)
         }
     }
 }
+function showCharacterWithoutPotions(character)
+{
+    console.log(`--------------------------`);
+    console.log(`Health:            ${character.health}`);
+    console.log(`Magick:            ${character.magick}`);
+    console.log(`Stamina:           ${character.stamina}`);
+    console.log(`--------------------------`);
 
+}
 export default Character

@@ -15,7 +15,7 @@ const execute = async () => {
 
         const cauldron = new Cauldron(ingredients);
         
-        const red_potionBag = PotionBag.create(bagsData.players[0].pouch_green,cauldron)
+        const red_potionBag = PotionBag.create(bagsData.players[0].pouch_aged,cauldron)
 
         showPotions(red_potionBag);
         const joseph = Character.from(bagsData,red_potionBag);
