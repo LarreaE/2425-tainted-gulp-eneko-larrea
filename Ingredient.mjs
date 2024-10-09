@@ -1,5 +1,5 @@
 
-import Effect from "./effect.mjs";
+import Effect from "./Effect.mjs";
 
 
 class Ingredient {

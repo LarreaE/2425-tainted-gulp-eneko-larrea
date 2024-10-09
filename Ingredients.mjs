@@ -1,4 +1,4 @@
-import Ingredient from "./ingredient.mjs";
+import Ingredient from "./Ingredient.mjs";
 
 
 class Ingredients {
