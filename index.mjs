@@ -15,10 +15,10 @@ const execute = async () => {
         const cauldron = new Cauldron(ingredients);
 
         //potion creation
-        const potion1 = cauldron.createPotion('Bear Claws','Bee');
-        const potion2 = cauldron.createPotion("Chicken's Egg",'Chaurus Eggs');
-        const potion3 = cauldron.createPotion('Chaurus Eggs','Chaurus Eggs');
-        const potion4 = cauldron.createPotion('Nightshade','Ectoplasm');
+        const potion1 = cauldron.createPotion('Elves Ear','Elves Ear');
+        const potion2 = cauldron.createPotion("Ectoplasm",'Ectoplasm');
+        const potion3 = cauldron.createPotion('Deathbell','Deathbell');
+        const potion4 = cauldron.createPotion('Crimson Nirnroot','Crimson Nirnroot');
 
         showPotion(potion1)
         showPotion(potion2)
