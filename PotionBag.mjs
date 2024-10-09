@@ -6,9 +6,7 @@ class PotionBag {
     }
 
     static create(ingredients,cauldron)
-    {
-        console.log(ingredients);
-        
+    {        
         let potions = [];
         
         for (let i = 0; i < ingredients.length; i++) {
@@ -18,8 +16,8 @@ class PotionBag {
                 potions.push(potion);
             }
         }
-        console.log(potions);
         
+        return new PotionBag(potions);
     }
 }
 
