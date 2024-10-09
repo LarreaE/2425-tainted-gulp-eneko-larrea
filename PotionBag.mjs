@@ -23,25 +23,4 @@ class PotionBag {
     }
 }
 
-function isCombined(i1,i2,combinations)
-{
-    for (let i = 0; i < combinations.length; i++) {
-        if (combinations[i].includes(i1) && combinations[i].includes(i2)) {
-            console.log(true);
-            
-            return true
-        }        
-    }
-    return false
-}
-function isInPouch(pouch,potion_name)
-{
-    for (let i = 0; i < pouch.length; i++) {
-        if (pouch[i].name === potion_name) {
-            return true
-        }        
-    }
-    return false
-}
-
 export default PotionBag
