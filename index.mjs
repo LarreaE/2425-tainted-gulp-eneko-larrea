@@ -15,13 +15,13 @@ const execute = async () => {
 
         const cauldron = new Cauldron(ingredients);
         
-        const red_potionBag = PotionBag.create(bagsData.players[0].pouch_red,cauldron)
+        const red_potionBag = PotionBag.create(bagsData.players[0].pouch_green,cauldron)
 
         showPotions(red_potionBag);
         const joseph = Character.from(bagsData,red_potionBag);
-        console.log(joseph);
-        
         showCharacter(joseph);
+
+        joseph.drinkEmAll();
 
     } catch (error) {
         console.log(error);
@@ -49,6 +49,8 @@ function showCharacter(character)
         console.log(`Potion ${i}:   ${character.potions.potions[i].name}`);
         
     }
+    console.log(`--------------------------`);
+
 }
 function showPotions(potion_bag) {
     console.log("SHOWING POTION BAG");
