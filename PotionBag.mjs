@@ -10,39 +10,21 @@ class PotionBag {
         console.log(ingredients);
         
         let potions = [];
-        let ingredientCombinations = [];
+        
+        for (let i = 0; i < ingredients.length; i++) {
 
-        for (const key in ingredients) {
-            
-            for (const j in ingredients) {
-                
-                const potion = cauldron.createPotion(ingredients[key],ingredients[j]);
-                if (potion.name != 'Failed Potion' && !isCombined(ingredients[key],ingredients[j], ingredientCombinations)) {
-                    potions.push(potion);
-                    ingredientCombinations.push(ingredients[key] + ingredients[j])
-                }
+            for (let j = i + 1; j < ingredients.length; j++) {
+                const potion = cauldron.createPotion(ingredients[i],ingredients[j]);
+                potions.push(potion);
             }
         }
+        console.log(potions);
         
     }
 }
 
 function isCombined(i1,i2,combinations)
 {
-    console.log("i1: " + i1);
-    console.log("i2: " + i2);
-    console.log(combinations);
-    
-    if (i1 === i2) 
-    {
-        for (let i = 0; i < combinations.length; i++) {
-            if (combinations[i].includes(i1+i2)) {
-                console.log(repe);
-                
-                return true
-            }        
-        }
-    }
     for (let i = 0; i < combinations.length; i++) {
         if (combinations[i].includes(i1) && combinations[i].includes(i2)) {
             console.log(true);
